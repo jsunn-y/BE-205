@@ -2,7 +2,7 @@
 
 ## Assignment 1 Report
 
-To run, install the conda environment from `env.sav`
+To run, install the conda environment from `env.yml`
 
 Weights saved from the logistic regression model: `Assignment 1/model.sav`
 
