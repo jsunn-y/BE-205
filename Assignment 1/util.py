@@ -5,7 +5,7 @@ from tqdm.auto import tqdm
 
 def run_test_case(X, y):
 
-    n_markers = X.shape[1]
+    n_markers = X.shape[3]
 
     whole_cell_y = y[:, :, :, 0].squeeze()
     n_cells = np.max(whole_cell_y) + 1
@@ -28,6 +28,7 @@ def run_test_case(X, y):
             # Collect views of each cell and associated celltype
             view = np.where(whole_cell_y == i)
             view_X = X[:, view[0], view[1], :]
+
             # Take the mean marker intensity for each marker
             means_X = np.mean(view_X, axis = 1)
             means_X_bycell[i, :] = means_X
