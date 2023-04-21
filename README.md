@@ -8,8 +8,10 @@ Function to test code (used for grading):  `run_test_code` from `Assignment 1/ut
 
 Jupyter notebook demo: `Assignment 1/main.ipynb`
 
-Marker Expression Panel:
+### Marker Expression Panel:
 <img src="Assignment 1/marker_expression.jpg">
 
-Confusion Matrix:
+### Confusion Matrix:
 <img src="Assignment 1/confusion_matrix.jpg">
+
+### Analysis:
