@@ -1,0 +1,71 @@
+cell_types:
+  0: Background
+  1: Unidentified
+  2: Endothelial
+  3: Mesenchyme
+  4: Tumor
+  5: Tregs
+  6: CD4T
+  7: CD8T
+  8: CD3T
+  9: Nk
+  10: Bcell
+  11: Neutrophil
+  12: Macrophage
+  13: DC
+  14: DC_Mono
+  15: Mono_Neu
+  16: Immune_other
+  17: FAILED_HARMONIZATION
+channels:
+- Au
+- B7H3
+- Beta-catenin
+- C
+- CD11b
+- CD11c
+- CD138
+- CD16
+- CD163
+- CD20
+- CD209
+- CD3
+- CD31
+- CD4
+- CD45
+- CD45RO
+- CD56
+- CD63
+- CD68
+- CD8
+- CSF-1R
+- Ca
+- EGFR
+- Fe
+- FoxP3
+- H3K27me3
+- H3K9ac
+- HLA-DR
+- HLA-Class-1
+- IDO
+- Keratin17
+- Keratin6
+- Ki67
+- Lag3
+- MPO
+- Na
+- OX40
+- P
+- PDL1
+- PD1
+- PanCK
+- SMA
+- Si
+- Ta
+- Vimentin
+- dsDNA
+- p53
+- pS6
+- background
+- sum of H3K27me3, H3K9ac, and dsDNA
+- sum_PanCK_CD45
