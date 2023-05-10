@@ -1,8 +1,17 @@
 # BE-205
 
-## Assignment 1 Report
-
 To run, install the conda environment from `env.yml`
+
+## Assignment 4 Report
+
+Jupyter notebook demo: `Assignment 4/main.ipynb`
+
+We chose to use a 1D convolutional neural network, following by a single dense layer to learn meaningful embeddings for protein sequences. Namely, we chose to predict the text token from contexts of length 20 amino acids. Even though we had access to a GPU, we limited the training set size signficantly and only trained for 10 epochs. The model seems to converge to the final loss, although it is not very low, and it only does somewhat better than randomly guessing (as calculating by the log likelihood of the cross entropy loss).
+
+### Visualization of Amino Acid Embeddings
+<img src="Assignment 1/marker_expression.jpg">
+
+## Assignment 1 Report
 
 Weights saved from the logistic regression model: `Assignment 1/model.sav`
 
