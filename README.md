@@ -1,8 +1,21 @@
 # BE-205
 
-## Assignment 1 Report
-
 To run, install the conda environment from `env.yml`
+
+## Assignment 4 Report
+
+Jupyter notebook demo: `Assignment 4/main.ipynb`
+
+We chose to use a 1D convolutional neural network, followed by a single dense layer, to learn meaningful embeddings for protein sequences. Namely, we chose to predict the next amino acid from contexts of length 20 amino acids, extracted from known protein sequences. Even though we had access to a GPU, we limited the training set size signficantly and only trained for 10 epochs. The training loss seems to converge, although it is not very low, and the model only does somewhat better than randomly guessing (as calculating by the log likelihood of the cross entropy loss).
+
+The model could be improved by making it more expressive (increasing the hidden dimension, adding layers, training for more epochs). A transformer archiecture may also work better than a 1D CNN. However, for the sake of this assignment, we did not explore these more computationally costly approaches. At a larger scale, it will be more important to consider memory requirements and make the processing of protein sequences to context encodings more efficient.
+
+### Visualization of Amino Acid Embeddings
+<img src="Assignment 4/embeddings.png">
+
+Generally, similar amino acids are grouped together. For example, G is the only amino acid without a side chain, and it is isolated in the emebedding space. Aromatic amino acids such as F and Y are close to one another, as are those with polar hydroxyl groups (S and T). Negatively charged and hydrophobic amino acids are also generally closer to one another. Thus, even with a limited amount of training on a small dataset, the learned embeddings capture differences in amino acids.
+
+## Assignment 1 Report
 
 Weights saved from the logistic regression model: `Assignment 1/model.sav`
 
