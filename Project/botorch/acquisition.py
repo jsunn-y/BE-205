@@ -162,6 +162,7 @@ def thompson_sampling(X, samp_x, samp_y, gp, xi=None, batch=1000):
 
     # with batching on GPU (generally faster)
     # to make this faster, don't recalculate embedding every time
+    #start = time.time()
     pred = []
     k = X.size()[0]
     with gpytorch.settings.fast_pred_var(), torch.no_grad():
@@ -179,7 +180,8 @@ def thompson_sampling(X, samp_x, samp_y, gp, xi=None, batch=1000):
             acq = max_obj(emb).cpu()
             pred.append(acq)
         pred = torch.cat(pred, 0)
-
+    #print(time.time() - start)
+    
     return pred
 
 
@@ -188,6 +190,7 @@ def upper_conf_bound(X, samp_x, samp_y, gp, beta, batch=1000):
     Computes UCB at points X, where beta represents exploration/exploitation tradeoff.
     UCB(x) = mu(x) + sqrt(beta) * sigma(x)
     '''
+    #start = time.time()
     if gpu:
         gp = gp.cuda()
     gp.eval()
@@ -208,7 +211,7 @@ def upper_conf_bound(X, samp_x, samp_y, gp, beta, batch=1000):
         mu = torch.cat(mu, 0)
         sigma = torch.cat(sigma, 0)
     delta = (beta * torch.ones_like(mu)).sqrt() * sigma
-
+    #print(time.time() - start)
     return mu.cpu() + delta.cpu()
 
 
